@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common'
 import { ProductosService } from './productos.service';
 import { CreateProductoDto } from './dto/create-producto.dto';
 import { UpdateProductoDto } from './dto/update-producto.dto';
+import { Producto } from './entities/producto.entity';
 
 @Controller('productos')
 export class ProductosController {
@@ -23,7 +24,7 @@ export class ProductosController {
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() updateProductoDto: UpdateProductoDto): Promise<import("c:/Users/manum/Tecnologias-Web/test-project/src/productos/entities/producto.entity").Producto> {
+  update(@Param('id') id: string, @Body() updateProductoDto: UpdateProductoDto): Promise <Producto> {
     return this.productosService.update(+id, updateProductoDto);
   }
 

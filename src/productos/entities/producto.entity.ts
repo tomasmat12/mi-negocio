@@ -16,11 +16,11 @@ export class Producto {
     @Column()
      precio: number;
 
-    @Column()
-     id_oferta: number;
 
-     @ManyToOne(()=> Oferta)
-     oferta: Oferta;
+
+     @ManyToOne(() => Oferta,oferta=> oferta.productos)
+     @JoinColumn({name: 'oferta_id'})
+     oferta : Oferta;
 
  
 

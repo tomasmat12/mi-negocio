@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "mi-negocio",
+            "database": "mi-negocio",
+            "username": "postgres",
+            "password": "secret123!"
+        }
+    ]
+}

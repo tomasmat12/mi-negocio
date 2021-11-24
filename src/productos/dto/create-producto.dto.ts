@@ -1,6 +1,8 @@
 export class CreateProductoDto {
-        nombre: string;
-        descripcion: string;
-        precio: number;
-        ofertaId:number;
+        'name': string;
+        'description': string;
+        'price': number;
+        'image': string;
+        'clearance': boolean;
+        
 }

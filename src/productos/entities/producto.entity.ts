@@ -4,25 +4,39 @@ import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "t
 @Entity()
 export class Producto {
 
-    @PrimaryGeneratedColumn() 
-     id: number;
+    @PrimaryGeneratedColumn()
+    id: number;
 
     @Column()
-     nombre: string;
+    public name: string;
 
     @Column()
-     descripcion: string;
+    public description: string;
 
     @Column()
-     precio: number;
+    public price: number;
+
+    @Column()
+    public image: string;
+
+    @Column()
+    public clearance: boolean;
 
 
 
-     @ManyToOne(() => Oferta,oferta=> oferta.productos)
-     @JoinColumn({name: 'oferta_id'})
-     oferta : Oferta;
+    @ManyToOne(() => Oferta, oferta => oferta.productos)
+    @JoinColumn({ name: 'oferta' })
+    oferta: Oferta;
 
- 
+    constructor(id: number, name: string, description: string, price: number, image: string, clearance: boolean) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.image = image;
+        this.clearance = clearance;
+    }
+
 
 
 }

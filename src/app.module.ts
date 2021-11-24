@@ -11,16 +11,16 @@ import { Oferta } from './ofertas/entities/oferta.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: 'secret123!',
-      database: 'minegocio',
+      url: process.env.DATABASE_URL,
       entities: [Producto, Oferta],
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      }
     }),
     ProductosModule,
-    OfertasModule],
+    OfertasModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

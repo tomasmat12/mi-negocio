@@ -25,6 +25,10 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+En el terminal, posicionarce en una carpeta donde vamos a instalar el proyecto, hacer "git clone https://github.com/Manuminnig/mi-negocio.git".
+
+Luego correr el comando "yarn install"
+
 
 ## Installation
 
